@@ -23,6 +23,7 @@ describe('Test the auth endpoints', () => {
     const userId = body.userId;
     const user = await User.findByPk(userId);
     expect(user.name).to.equal(payload.name);
+    expect(user.last_name).to.equal(payload.last_name);
   });
 
   it('should return 400 if payload is incomplete', async () => {

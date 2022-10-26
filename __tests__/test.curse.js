@@ -17,10 +17,18 @@ describe('Test the curse endpoints', () => {
   before( async () => {
     token = await getToken();
     curse1 = await Curse.create({
-      name: 'test',
+      id: 'TE120',
+      name: 'test1',
+      credit: '3',
+      nota_id: '2',
+      condition_id:'3',
     })
     curse2 = await Curse.create({
+      id: 'TE220',
       name: 'test2',
+      credit: '4',
+      nota_id: '3',
+      condition_id:'4',
     })
   })
 
