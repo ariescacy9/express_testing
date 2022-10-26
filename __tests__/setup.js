@@ -10,4 +10,4 @@ before(async () => {
     'password': '12345689'
   }
   await request(app).post('/auth/register').send(payload);
-})
+});

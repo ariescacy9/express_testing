@@ -11,7 +11,11 @@ npx sequelize-cli init
 
 - se instala mocha, chai y supertest
 ```bash
-npm i mocha chai supertest
+npm i mocha chai supertest 
+```
+- se instala cross-env
+```bash
+npm i cross-env 
 ```
 luego hay que modificar el archivo de migración que se crea en la carpeta migrations
 
