@@ -26,4 +26,6 @@ luego hay que modificar el archivo de migración que se crea en la carpeta migra
 npx cross-env NODE_ENV=test npx sequelize-cli db:create
 npx cross-env NODE_ENV=test npx sequelize-cli db:migrate
 ```
+### muestra resultados testeados
 
+![App Screenshot](https://github.com/ariescacy9/express_testing/blob/main/img/test.JPG?raw=true)
