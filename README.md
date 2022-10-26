@@ -28,4 +28,4 @@ npx cross-env NODE_ENV=test npx sequelize-cli db:migrate
 ```
 ### muestra resultados testeados
 
-![App Screenshot](https://github.com/ariescacy9/express_testing/blob/main/img/test.JPG?raw=true)
+![App Screenshot](https://github.com/ariescacy9/express_testing/blob/master/img/test.JPG?raw=true)
