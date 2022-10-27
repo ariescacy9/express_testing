@@ -27,5 +27,5 @@ npx cross-env NODE_ENV=test npx sequelize-cli db:create
 npx cross-env NODE_ENV=test npx sequelize-cli db:migrate
 ```
 ### muestra resultados testeados
-![App Screenshot](https://github.com/ariescacy9/express_testing/blob/master/img/test2.JPG?raw=true)
+![App Screenshot](https://github.com/ariescacy9/express_testing/blob/master/img/test.JPG?raw=true)
 
