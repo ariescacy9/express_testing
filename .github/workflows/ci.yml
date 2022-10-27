@@ -27,10 +27,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Setup Node
-        uses: actions/setups-node@v1
+        uses: actions/setups-node@v3
         with:
           node-version: "16.16"
       - name: Installing Dependencies # se instalan las dependencias
-          run: npm i
+          run: npm install
       - name: testing our app
           run: npm test
