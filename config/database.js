@@ -1,6 +1,10 @@
 import { Sequelize } from "sequelize";
-import * as dotenv from 'dotenv';
+/*import * as dotenv from 'dotenv';
 dotenv.config();
+*/
+import _config from "../config/config.js"
+const env = process.env.ENV;
+const config = _config[env];
 
 const db = new Sequelize(
   process.env.DB_NAME, //esta base de dataos ya la tenemos creadas "larnu_demo"
