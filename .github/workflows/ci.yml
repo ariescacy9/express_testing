@@ -32,7 +32,7 @@ jobs:
         with:
           node-version: "v16.16.0"
 
-      - name: Installing Dependencies
+      - name: Installing Dependencies # se instalan las dependencias
           run: npm i
 
       - name: testing our app
