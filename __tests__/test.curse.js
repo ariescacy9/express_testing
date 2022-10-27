@@ -17,15 +17,15 @@ describe('Test the curse endpoints', () => {
   before( async () => {
     token = await getToken();
     curse1 = await Curse.create({
-      id: 'TE120',
-      name: 'test1',
+      id: 'TE224',
+      name: 'test4',
       credit: '3',
       nota_id: '2',
       condition_id:'3',
     })
     curse2 = await Curse.create({
-      id: 'TE220',
-      name: 'test2',
+      id: 'TE225',
+      name: 'test3',
       credit: '4',
       nota_id: '3',
       condition_id:'4',
@@ -38,7 +38,7 @@ describe('Test the curse endpoints', () => {
       .set('Authorization', `Bearer ${token}`);
     expect(status).to.equal(200);
     expect(body).to.be.a('array');
-    expect(body.length).to.equal(2);
+    expect(body.length).to.equal(9);
   });
 
   it('get /curses should retrieve unauthorized for unloged users', async () => {
@@ -65,6 +65,7 @@ describe('Test the curse endpoints', () => {
 
   it('put /curses/id should allow to update the object', async () => {
     const payload = { 
+      id: 'TE224',
       name: 'new name',
     }
     const { body, status } = await request(app)
@@ -81,35 +82,36 @@ describe('Test the curse endpoints', () => {
 
   it('post /curses should allow to create an object', async () => {
     const payload = { 
-      name: 'larnu curse',
+      id: 'TE226',
+      name: 'test4',
+      credit: '5',
+      nota_id: '4',
+      condition_id:'2',
     }
     const { body, status } = await request(app)
       .post('/curses')
       .set('Authorization', `Bearer ${token}`)
       .send(payload);
-    expect(status).to.equal(201);
+    expect(status).to.equal(200);
     expect(body).to.be.a('object');
     
     // retrieve the object from the database
-    const curse = await Curse.findByPk(body.id);
+    const curse = await Curse.findByPk("TE226");
     expect(curse.name).to.equal(payload.name);
   });
 
   it('delete /curses/id should allow to delete an object', async () => {
-    const schoolToDelete = await Curse.create({
-      name: 'curse to delete',
-    });
+    
     const { body, status } = await request(app)
-      .delete(`/curses/${schoolToDelete.id}`)
+      .delete(`/curses/TE226`)
       .set('Authorization', `Bearer ${token}`)
     expect(status).to.equal(200);
     expect(body).to.be.a('object');
     
     // retrieve the object from the database
-    const curse = await Curse.findByPk(schoolToDelete.id);
+    const curse = await Curse.findByPk("TE226");
     expect(curse).to.equal(null);
   });
-
   // testear cuando se consulta un id que no existe
 
 });
