@@ -2,9 +2,6 @@ name: Express.js CD
 on:
   push:
     branches: [ master ]
-#env:
-#  POSTGRES_HOST: localhost
-#  POSTGRES_PORT: 5432
 
 jobs:
   test:
@@ -38,7 +35,7 @@ jobs:
       - name: testing our app
         run: npm test
 
-    deploy:
+  deploy:
     needs: [test]
     name: Wait for Deploy
     runs-on: ubuntu-latest
