@@ -5,6 +5,10 @@ import Router from "./routes/routes.js";
 import AuthRouter from "./routes/auth.js";
 // Init express
 const app = express(); 
+
+// Init middleware
+console.log(process.env.ENV); 
+
 // use express json
 app.use(express.json());
 app.use(cors());  //es una libreria que permite (es una capa de seguridad que nosotro sle aplicamos  ala app) (buscar Cross-origin resource)
