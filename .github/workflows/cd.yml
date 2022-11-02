@@ -44,7 +44,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:  
       - name: call render webhook 
-        uses: fjogeleit/http-request-action@v3 
+        uses: fjogeleit/http-request-action@v1 
         with:
           url: ${{ secrets.RENDER_HOOK }}
           method: 'GET'
