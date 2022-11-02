@@ -8,7 +8,6 @@ import { before } from 'mocha';
 
 const { expect } = chai;
 
-
 describe('Test the curse endpoints', () => {
   let token;
   let curse1;
@@ -112,6 +111,4 @@ describe('Test the curse endpoints', () => {
     const curse = await Curse.findByPk("TE226");
     expect(curse).to.equal(null);
   });
-  // testear cuando se consulta un id que no existe
-
 });
