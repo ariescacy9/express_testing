@@ -1,5 +1,7 @@
 name: Express.js CI
 on:
+  #push:
+  #  branches: [ master ]
   pull_request:
     branches: [ master ]
 
