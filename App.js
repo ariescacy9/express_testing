@@ -25,6 +25,4 @@ try {
 app.use(Router);
 app.use(AuthRouter);
 
-app.listen(5000, () => console.log('Servidor corriendo en localhost:5000...'))
-
 export default app;
