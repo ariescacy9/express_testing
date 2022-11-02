@@ -11,8 +11,7 @@ on:
 
 jobs:
   test:
-    #runs-on: ubuntu-latest
-    runs:
+    runs-on: ubuntu-latest
       using: 'node16'
     services:
       postgres:
