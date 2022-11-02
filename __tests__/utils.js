@@ -11,4 +11,4 @@ async function getToken() {
   return body.accessToken;
 }
 
-export default getToken;
+export default getToken; 
