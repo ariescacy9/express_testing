@@ -1,9 +1,9 @@
 name: Express.js CI
 on:
-  #push:
-  #  branches: [ master ]
-  pull_request:
+  push:
     branches: [ master ]
+  #pull_request:
+  #  branches: [ master ]
 
 #env:
 #  POSTGRES_HOST: localhost
