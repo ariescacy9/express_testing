@@ -45,3 +45,4 @@ jobs:
         with:
           url: ${{ secrets.RENDER_HOOK }}
           method: 'GET'
+          
