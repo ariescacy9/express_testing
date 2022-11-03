@@ -5,7 +5,6 @@ import User from '../models/user.js';
 
 const { expect } = chai;
 
-
 describe('Test the auth endpoints', () => {
 
   it('should allow to create users', async () => {
