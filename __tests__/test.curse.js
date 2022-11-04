@@ -37,7 +37,7 @@ describe('Test the curse endpoints', () => {
       .set('Authorization', `Bearer ${token}`);
     expect(status).to.equal(200);
     expect(body).to.be.a('array');
-    expect(body.length).to.equal(2);//'9 en test local'
+    expect(body.length).to.equal(9);//'9 en test local'
   });
 
   it('get /curses should retrieve unauthorized for unloged users', async () => {

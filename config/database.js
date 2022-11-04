@@ -1,21 +1,22 @@
-
 import { Sequelize } from "sequelize";
-import _config from "../config/config.js"
-const env = process.env.ENV;
-const config = _config[env];
+import _config from "../config/config.js";
 
+const env = process.env.ENV;
+const config = _config [env];
+
+// create connection
 const db = new Sequelize(
-  config.database, //mi base de datos se llama postgres tambien
-  config.username, //"postgres"
-  config.password, 
+  config.database,
+  config.username,
+  config.password,
   {
-    host: config.host, //si trabajamos en nuestra computadora solamente
-    dialect: 'postgres', //dialecto
+    host: config.host,
+    dialect: 'postgres',
     logging: false,
-    port: 5432, //es el puerto por defecto, si tenemos otro tenemos que ponerlo, sino dejamos este
-  define: {
-    timestamps: false //tiene el uso de dos campos createup y updatecreate, nosotros aca ledesimos que no haga eso
+    define: {
+      timestamps: false
+    }
   }
-});
+);
 
 export default db;
