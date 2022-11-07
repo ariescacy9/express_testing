@@ -26,6 +26,7 @@ const Curse = db.define('curse', {
     type: DataTypes.INTEGER
   }
 },{
+  timestamps:false,
   tableName: 'curse'
 });
 

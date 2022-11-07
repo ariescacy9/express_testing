@@ -30,6 +30,7 @@ const User = db.define('user', {
     defaultValue: Sequelize.NOW
   }
 },{
+  timestamps:false,
   tableName: 'user'
 });
 
